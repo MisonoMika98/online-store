@@ -4,13 +4,16 @@ package com.pluralsight;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class OnlineStoreApp
 {
     static Scanner userInput = new Scanner(System.in);
     static ArrayList<Product> products;
-    static ArrayList<Product> shoppingCart;
+    static HashMap<Product, Integer> shoppingCart = new HashMap<>();
+
+
 
     static void main()
     {
@@ -31,7 +34,7 @@ public class OnlineStoreApp
         System.out.println("C) Display Cart");
         System.out.println("X) Exit");
         System.out.println();
-        System.out.print("Make a selection: ");
+        System.out.print("Make a choice: ");
         String choice = userInput.nextLine().toUpperCase().strip();
 
         System.out.println();
@@ -39,7 +42,7 @@ public class OnlineStoreApp
         switch (choice)
         {
             case "D":
-                System.out.println("test");
+                displayProductSearch();
                 break;
 
             case "C":
@@ -47,12 +50,96 @@ public class OnlineStoreApp
                 break;
 
             case "X":
-                System.out.println("test 3");
+                System.out.println("Goodbye");
                 return;
+
             default:
-                System.out.println("error");
+                System.out.println("Error, please try again");
 
         }
+    }
+
+
+
+    static void displayProductSearch()
+    {
+        while (true)
+        {
+            System.out.println();
+            System.out.println("What do you want to do? ");
+            System.out.println("1) Search product by name");
+            System.out.println("2) Search product SKU");
+            // System.out.println("3) check out");
+            System.out.println("X) Exit");
+            System.out.print("Make your selection: ");
+            String selection = userInput.nextLine().toUpperCase().strip();
+
+            System.out.println();
+
+
+            Product product;
+
+            switch (selection)
+            {
+                case "1":
+                    System.out.print("Enter product name to search for: ");
+                    String userSearch = userInput.nextLine().strip();
+
+                    product = findProductByName(userSearch);
+                    System.out.printf("%-20s | $%,.2f%n", product.getProductName(), product.getPrice());
+                    System.out.println();
+                    break;
+
+                case "2":
+                    System.out.print("Enter SKU to search for: ");
+                    String userSearch2 = userInput.nextLine().strip();
+
+                    product = findProductBySKU(userSearch2);
+
+                    System.out.printf("%-20s | $%,.2f%n", product.getProductName(), product.getPrice());
+                    System.out.println();
+                    break;
+
+                case "X":
+                    System.out.print("Goodbye");
+                    return;
+
+                default:
+                    System.out.println("Error, please try again");
+                    continue;
+            }
+        }
+
+    }
+
+
+
+    public static Product findProductByName(String productName)
+    {
+      for (Product product : products)
+      {
+          if (product.getProductName().toLowerCase().contains(productName.toLowerCase()))
+          {
+              System.out.println();
+              return product;
+          }
+      }
+      return null;
+    }
+
+
+
+    public static Product findProductBySKU(String sku)
+    {
+        for (Product product : products)
+        {
+            if (product.getSku().toLowerCase().contains(sku.toLowerCase()))
+            {
+                System.out.println();
+                return product;
+            }
+        }
+        return null;
     }
 
 
@@ -97,9 +184,6 @@ public class OnlineStoreApp
           System.out.println("Error reading products.csv");
           System.out.println(e.getMessage());
       }
-
-       // create array to read .csv
-
 
        return products;
     }
