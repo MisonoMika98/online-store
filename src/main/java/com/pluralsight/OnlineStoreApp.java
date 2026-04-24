@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class OnlineStoreApp
@@ -27,9 +28,8 @@ public class OnlineStoreApp
     static void displayHomeScreen()
     {
         System.out.println();
-        System.out.println("Welcome to my top secret store...");
+        System.out.println("Welcome to my Store");
         System.out.println("---------------------------------");
-        System.out.println();
         System.out.println("D) Display Products");
         System.out.println("C) Display Cart");
         System.out.println("X) Exit");
@@ -46,7 +46,7 @@ public class OnlineStoreApp
                 break;
 
             case "C":
-                System.out.println("test 2");
+                displayCart();
                 break;
 
             case "X":
@@ -69,13 +69,14 @@ public class OnlineStoreApp
             System.out.println("What do you want to do? ");
             System.out.println("1) Search product by name");
             System.out.println("2) Search product SKU");
-            // System.out.println("3) check out");
+            System.out.println("3) check out");
+            System.out.println("C) View Shopping Cart");
             System.out.println("X) Exit");
+            System.out.println();
             System.out.print("Make your selection: ");
             String selection = userInput.nextLine().toUpperCase().strip();
 
             System.out.println();
-
 
             Product product;
 
@@ -100,6 +101,17 @@ public class OnlineStoreApp
                     System.out.println();
                     break;
 
+                case "3":
+                    System.out.println();
+                    System.out.println("Enjoy your goods!!!!!!!!!!!");
+                    // clears the hashmap
+                    shoppingCart.clear();
+                    continue;
+
+                case "C":
+                    displayCart();
+                    continue;
+
                 case "X":
                     System.out.print("Goodbye");
                     return;
@@ -108,8 +120,38 @@ public class OnlineStoreApp
                     System.out.println("Error, please try again");
                     continue;
             }
+
+            // if else loop to make the shoppingCart hashmap work
+            if (shoppingCart.containsKey(product))
+            {
+                // creates new int that keeps track of how many products the customer adds to cart
+                int quantity = shoppingCart.get(product);
+                shoppingCart.put(product, quantity + 1);
+            }
+            else
+            {
+                // if the product is NOT in our cart, put 1 in
+                shoppingCart.put(product, 1);
+            }
         }
 
+    }
+
+
+
+    static void displayCart()
+    {
+        System.out.println();
+        System.out.println("Your Shopping Cart");
+        System.out.println("-------------------------------------------");
+
+        // no clue what this for loop does, thank you Gregor
+        for (Map.Entry<Product, Integer> row : shoppingCart.entrySet())
+        {
+            Product lineItem = row.getKey();
+            int quantity = row.getValue();
+            System.out.println(lineItem.getProductName() + " " + quantity);
+        }
     }
 
 
