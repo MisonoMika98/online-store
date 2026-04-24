@@ -1,0 +1,151 @@
+SKU|Product Name|Price|Department
+AV2001|Bluetooth Soundbar|129.99|Audio Video
+AV2002|4K Streaming Stick|39.99|Audio Video
+AV2003|Noise Cancelling Headphones|199.99|Audio Video
+AV2004|Portable DVD Player|79.99|Audio Video
+AV2005|Smart TV 55 Inch|499.99|Audio Video
+CP2006|Gaming Laptop Ryzen 7|899.99|Computers
+CP2007|Wireless Mouse|14.99|Computers
+CP2008|Mechanical Keyboard|89.99|Computers
+CP2009|USB Flash Drive 128GB|19.99|Computers
+CP2010|External Hard Drive 2TB|74.99|Computers
+EL2011|LED Light Bulb 4 Pack|12.99|Electronics
+EL2012|Smart Plug|18.99|Electronics
+EL2013|Phone Tripod Stand|9.99|Electronics
+EL2014|Wireless Earbuds|49.99|Electronics
+EL2015|Car Phone Mount|15.99|Electronics
+GM2016|Chess Set Wooden|24.99|Games
+GM2017|Monopoly Classic|19.99|Games
+GM2018|UNO Card Game|6.99|Games
+GM2019|Puzzle 1000 Piece|14.99|Games
+GM2020|VR Headset Toy|39.99|Games
+CL2021|Men's T-Shirt Cotton|9.99|Clothing
+CL2022|Women's Hoodie|24.99|Clothing
+CL2023|Kids Jeans|19.99|Clothing
+CL2024|Running Shoes|59.99|Clothing
+CL2025|Baseball Cap|12.99|Clothing
+CL2026|Winter Jacket|79.99|Clothing
+CL2027|Socks 6 Pack|8.99|Clothing
+CL2028|Yoga Pants|22.99|Clothing
+CL2029|Dress Shirt|29.99|Clothing
+CL2030|Flip Flops|7.99|Clothing
+GR2031|Milk Gallon|3.49|Grocery
+GR2032|Eggs Dozen|2.99|Grocery
+GR2033|Bread Loaf|2.49|Grocery
+GR2034|Chicken Breast 1lb|5.99|Grocery
+GR2035|Ground Beef 1lb|6.49|Grocery
+GR2036|Apples 3lb Bag|4.99|Grocery
+GR2037|Bananas 1lb|0.69|Grocery
+GR2038|Orange Juice|3.99|Grocery
+GR2039|Frozen Pizza|5.49|Grocery
+GR2040|Cereal Box|3.99|Grocery
+HM2041|Coffee Maker|39.99|Home
+HM2042|Toaster 2 Slice|24.99|Home
+HM2043|Blender|29.99|Home
+HM2044|Air Fryer|79.99|Home
+HM2045|Vacuum Cleaner|129.99|Home
+HM2046|Bed Sheets Queen|34.99|Home
+HM2047|Pillow Set|19.99|Home
+HM2048|Bath Towels 4 Pack|24.99|Home
+HM2049|Desk Lamp|18.99|Home
+HM2050|Storage Bin|9.99|Home
+SP2051|Basketball|14.99|Sports
+SP2052|Soccer Ball|12.99|Sports
+SP2053|Tennis Racket|39.99|Sports
+SP2054|Dumbbell Set|59.99|Sports
+SP2055|Yoga Mat|19.99|Sports
+SP2056|Running Shorts|14.99|Sports
+SP2057|Water Bottle|9.99|Sports
+SP2058|Camping Tent|89.99|Sports
+SP2059|Fishing Rod|34.99|Sports
+SP2060|Bike Helmet|29.99|Sports
+TY2061|Action Figure|12.99|Toys
+TY2062|Doll House|39.99|Toys
+TY2063|Toy Car Set|14.99|Toys
+TY2064|Building Blocks|24.99|Toys
+TY2065|Stuffed Bear|9.99|Toys
+TY2066|RC Car|49.99|Toys
+TY2067|Board Game Kids|11.99|Toys
+TY2068|Puzzle Kids|8.99|Toys
+TY2069|Toy Train Set|29.99|Toys
+TY2070|Water Gun|6.99|Toys
+BT2071|Shampoo|5.99|Beauty
+BT2072|Conditioner|5.99|Beauty
+BT2073|Body Wash|4.99|Beauty
+BT2074|Toothpaste|2.99|Beauty
+BT2075|Face Cream|12.99|Beauty
+BT2076|Hair Dryer|19.99|Beauty
+BT2077|Makeup Kit|24.99|Beauty
+BT2078|Razor Pack|9.99|Beauty
+BT2079|Hand Soap|1.99|Beauty
+BT2080|Perfume|29.99|Beauty
+OF2081|Notebook|2.99|Office
+OF2082|Ballpoint Pens 10 Pack|4.99|Office
+OF2083|Desk Organizer|14.99|Office
+OF2084|Stapler|6.99|Office
+OF2085|Printer Paper Ream|7.99|Office
+OF2086|Whiteboard|19.99|Office
+OF2087|Marker Set|5.99|Office
+OF2088|Calendar Planner|9.99|Office
+OF2089|Office Chair|89.99|Office
+OF2090|Laptop Stand|24.99|Office
+PT2091|Dog Food 20lb|29.99|Pets
+PT2092|Cat Food 10lb|19.99|Pets
+PT2093|Dog Leash|12.99|Pets
+PT2094|Cat Toy|6.99|Pets
+PT2095|Pet Bed|24.99|Pets
+PT2096|Fish Tank|49.99|Pets
+PT2097|Bird Cage|39.99|Pets
+PT2098|Pet Shampoo|8.99|Pets
+PT2099|Dog Treats|9.99|Pets
+PT2100|Cat Litter|14.99|Pets
+EL2101|Extension Cord|12.99|Electronics
+EL2102|Surge Protector|19.99|Electronics
+EL2103|Portable Charger|22.99|Electronics
+EL2104|HDMI Cable|9.99|Electronics
+EL2105|Smart Watch|149.99|Electronics
+CL2106|Tank Top|11.99|Clothing
+CL2107|Sweatpants|21.99|Clothing
+CL2108|Winter Gloves|14.99|Clothing
+CL2109|Scarf|12.99|Clothing
+CL2110|Rain Jacket|49.99|Clothing
+GR2111|Pasta 1lb|1.49|Grocery
+GR2112|Tomato Sauce|2.29|Grocery
+GR2113|Cheese Block|3.99|Grocery
+GR2114|Butter|2.99|Grocery
+GR2115|Yogurt Pack|4.99|Grocery
+HM2116|Microwave Oven|89.99|Home
+HM2117|Dish Rack|19.99|Home
+HM2118|Cutting Board|9.99|Home
+HM2119|Knife Set|39.99|Home
+HM2120|Cookware Set|99.99|Home
+SP2121|Baseball Bat|24.99|Sports
+SP2122|Football|18.99|Sports
+SP2123|Jump Rope|7.99|Sports
+SP2124|Gym Bag|29.99|Sports
+SP2125|Treadmill|399.99|Sports
+TY2126|Lego Set|49.99|Toys
+TY2127|Puzzle 500 Piece|12.99|Toys
+TY2128|Toy Kitchen Set|34.99|Toys
+TY2129|Foam Sword|8.99|Toys
+TY2130|Toy Dinosaur|14.99|Toys
+BT2131|Nail Polish|4.99|Beauty
+BT2132|Lipstick|9.99|Beauty
+BT2133|Face Wash|6.99|Beauty
+BT2134|Body Lotion|7.99|Beauty
+BT2135|Hair Gel|5.49|Beauty
+OF2136|Sticky Notes|3.99|Office
+OF2137|Paper Clips|1.99|Office
+OF2138|Binder|4.99|Office
+OF2139|Folder Pack|6.99|Office
+OF2140|Desk Fan|19.99|Office
+PT2141|Dog Bowl|9.99|Pets
+PT2142|Cat Bowl|7.99|Pets
+PT2143|Pet Carrier|29.99|Pets
+PT2144|Aquarium Filter|19.99|Pets
+PT2145|Bird Food|6.99|Pets
+EL2146|Tablet 10 Inch|199.99|Electronics
+EL2147|Bluetooth Tracker|24.99|Electronics
+EL2148|Smart Thermostat|129.99|Electronics
+EL2149|Drone Camera|299.99|Electronics
+EL2150|Gaming Console|499.99|Electronics
