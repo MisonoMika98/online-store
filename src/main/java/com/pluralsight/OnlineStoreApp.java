@@ -51,7 +51,7 @@ public class OnlineStoreApp
 
             case "X":
                 System.out.println("Goodbye");
-                return;
+                break;
 
             default:
                 System.out.println("Error, please try again");
@@ -69,9 +69,9 @@ public class OnlineStoreApp
             System.out.println("What do you want to do? ");
             System.out.println("1) Search product by name");
             System.out.println("2) Search product SKU");
-            System.out.println("3) check out");
+            System.out.println("3) Check out");
             System.out.println("C) View Shopping Cart");
-            System.out.println("X) Exit");
+            System.out.println("X) Go back to home screen");
             System.out.println();
             System.out.print("Make your selection: ");
             String selection = userInput.nextLine().toUpperCase().strip();
@@ -113,26 +113,14 @@ public class OnlineStoreApp
                     continue;
 
                 case "X":
-                    System.out.print("Goodbye");
-                    return;
+                    displayHomeScreen();
+                    continue;
 
                 default:
                     System.out.println("Error, please try again");
                     continue;
             }
-
-            // if else loop to make the shoppingCart hashmap work
-            if (shoppingCart.containsKey(product))
-            {
-                // creates new int that keeps track of how many products the customer adds to cart
-                int quantity = shoppingCart.get(product);
-                shoppingCart.put(product, quantity + 1);
-            }
-            else
-            {
-                // if the product is NOT in our cart, put 1 in
-                shoppingCart.put(product, 1);
-            }
+            updateCart(product, 1);
         }
 
     }
@@ -150,7 +138,90 @@ public class OnlineStoreApp
         {
             Product lineItem = row.getKey();
             int quantity = row.getValue();
-            System.out.println(lineItem.getProductName() + " " + quantity);
+            System.out.println(lineItem.getProductName() + " x" + quantity + " " + lineItem.getPrice() + " each");
+        }
+
+        while (true)
+        {
+            // new menu features for the shopping cart
+            System.out.println();
+            System.out.println("Would you like to do anything with your shopping cart?");
+            System.out.println("1) Remove product");
+            System.out.println("2) Check out");
+            System.out.println("P) Go back to product search");
+            System.out.println();
+
+
+            System.out.print("Make your selection: ");
+
+            String selection2 = userInput.nextLine().toUpperCase().strip();
+            switch (selection2)
+            {
+                case "1":
+                    System.out.print("Enter the product you want to remove from your cart: ");
+                    String userRemove = userInput.nextLine().strip();
+
+                    // calls Product back into scope using a new string variable
+                    Product productToRemove = null;
+
+                    // p is a temporary variable that only exists inside this loop to make the shoppingCart hashmap work
+                    for (Product p : shoppingCart.keySet())
+                    {
+                        if (p.getProductName().equalsIgnoreCase(userRemove)) {
+                            productToRemove = p;
+                            break;
+                        }
+                    }
+
+                    if (productToRemove != null)
+                    {
+                        updateCart(productToRemove, -1);
+                        System.out.println("Removed product " + productToRemove.getProductName());
+                    }
+                    else
+                    {
+                        System.out.println("Error, product doesn't exist in your cart");
+                    }
+                    break;
+
+                case "2":
+                    System.out.println();
+                    System.out.println("Enjoy your goods!!!!!!!!!!!");
+                    // clears the hashmap
+                    shoppingCart.clear();
+                    return;
+
+                case "P":
+                    displayProductSearch();
+                    break;
+
+                default:
+                    System.out.println("Error, please try again");
+            }
+        }
+    }
+
+
+
+    // helper method that handles adding and removing products from the cart
+    static void updateCart(Product product, int productQuantity)
+    {
+        if (shoppingCart.containsKey(product))
+        {
+            int newQuantity = shoppingCart.get(product) + productQuantity;
+
+            if (newQuantity <= 0)
+            {
+                shoppingCart.remove(product);
+            }
+            else
+            {
+                shoppingCart.put(product, newQuantity);
+            }
+        }
+        else if (productQuantity > 0)
+        {
+            shoppingCart.put(product, productQuantity);
         }
     }
 
